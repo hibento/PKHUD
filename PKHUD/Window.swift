@@ -10,7 +10,7 @@
 import UIKit
 
 /// The window used to display the PKHUD within. Placed atop the applications main window.
-internal class ContainerView: UIView {
+public class ContainerView: UIView {
 
     private var keyboardIsVisible = false
     private var keyboardHeight: CGFloat = 0.0
@@ -36,7 +36,7 @@ internal class ContainerView: UIView {
         addSubview(frameView)
     }
 
-    internal override func layoutSubviews() {
+    public override func layoutSubviews() {
         super.layoutSubviews()
 
         frameView.center = calculateHudCenter()
